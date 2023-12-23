@@ -1,0 +1,33 @@
+input{
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2), 0 10px 20px 0 rgba(0,0,0,0.2);
+}
+
+h1{
+   background-color: antiquewhite; 
+   opacity: 70%;
+   width: 70%;
+}
+
+body{
+    background-image: url(start_img.png);
+    background-repeat: no-repeat;
+}
+
+input{
+    border-radius: 10px;
+    width: 150px;
+    height: 60px;
+    font-size:medium;
+    background-color:antiquewhite;
+    cursor: pointer;
+}
+
+#submission:hover {
+    background-color: darkgray;
+}
+
+a{
+    font-size: large;
+    color: white;
+}
+

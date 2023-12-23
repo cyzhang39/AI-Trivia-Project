@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="trivia.css">
+    </head>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const submission = document.getElementById('submission');
+            submission.disabled = true;
+
+            setTimeout(function () {
+                submission.disabled = false;
+            }, 20335);
+        });
+
+        var remTime = 20;
+        var countDown = setInterval(() => {
+            if(remTime <= 0) {
+                clearInterval(countDown);
+            }
+
+            document.getElementById("progress-bar").value = 20 - remTime;
+            remTime -= 1;
+        }, 1000);
+    </script>
+    <body>        
+        <h1>Trivia Topic: <%- topic %></h1>
+        <br>
+        <h1><b>Best Score: </b> <%- best_score %></h1>
+        <br>
+        <h1>Score: <%- score %></h1>
+        <br>
+        <p id="note"><u>Note: There is a 20.335 second cool-down before you can submit your answer due to the OpenAI API rate limit (We are too poor to upgrade （>﹏<）).</u></p>
+        <br>
+        <progress value="0" max="20" id="progress-bar"></progress>
+        <form action="/answer" method="post">
+            <p id="question"><b><%- question %></b></p>
+            <div id="options"><%- options %></div>
+            <input type="submit" id="submission" value="Submit Answer">
+        </form>
+    </body>
+    
+</html>
+

@@ -1,0 +1,47 @@
+input{
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2), 0 10px 20px 0 rgba(0,0,0,0.2);
+}
+
+h1{
+   background-color: antiquewhite; 
+   opacity: 70%;
+   width: 40%;
+   margin: auto;
+   align-items: center;
+   display: inline-block;
+}
+
+body{
+    background-image: url(start_img.png);
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+
+#note{
+    color:rgb(7, 250, 7)
+}
+
+#question{
+    font-size: large;
+    background-color: antiquewhite;
+    display: inline-block;
+}
+
+#options{
+    color: aliceblue;
+    font-size: large;
+}
+
+#submission{
+    border-radius: 10px;
+    width: 150px;
+    height: 60px;
+    margin-left: 44%;
+    font-size:medium;
+    background-color:antiquewhite;
+}
+
+#submission:hover {
+    background-color: darkgray;
+}
+
